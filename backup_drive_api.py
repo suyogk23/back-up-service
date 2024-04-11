@@ -1,6 +1,9 @@
 import os
 import os.path
 
+import write_log as log
+logfile="logs.log"
+
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -51,7 +54,9 @@ try:
                                            media_body=media,
                                            fields="id").execute()
         print("Backed up file: "+file)
+        log.write_log(logfile,"Backed up file: "+file)
 
 except HttpError as e:
     print("Error: "+str(e))
+    log.write_log(logfile,"Error: "+str(e))
 

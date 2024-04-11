@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: back-up-service-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-backupservice
+  template:
+    metadata:
+      labels:
+        app: docker-backupservice
+    spec:
+      containers:
+      - name: back-up-service
+        image: suyog23/back-up-service
+      
+      volumes:
+      - name: backup-data-volume
+        persistentVolumeClaim:
+          claimName: backup_pvc
+    
