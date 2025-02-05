@@ -10,7 +10,7 @@ WEEK-1:
 >Created a docker container to run this script with necessary dependencies installed
 
 
-WEEK-1:
+WEEK-2:
 
 >Created a GCP account and set up google-drive api
 >
@@ -18,7 +18,7 @@ WEEK-1:
 >
 >Created a docker container to run this script with necessary dependencies installed
 
-WEEK-1:
+WEEK-3:
 
 >set up cronjob in kubernetes
 >
